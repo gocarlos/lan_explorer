@@ -1,0 +1,14 @@
+name:           lanexplorer
+version:        1.0
+summary:        LAN explorer snap app
+description:    LAN explorrer snap app
+confinement:    devmode
+grade:          stable
+
+apps:
+  lanexplorer:
+    command:    lan_explorer_app
+
+parts:
+  lanexplorer:
+    plugin:     python
