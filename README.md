@@ -41,6 +41,10 @@ You can also install it by tipping:
 sudo snap install lan_explorer --edge --devmode
 ```
 
+
+## Dependencies
+* gir1.2-webkit-3.0
+
 <br>
 <br>
 <br>

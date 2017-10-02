@@ -4,6 +4,7 @@ import time
 from subprocess import Popen, DEVNULL
 from lan_explorer_tools import Tools
 import subprocess
+import webview
 
 class LanExplorer():
 
@@ -36,6 +37,7 @@ class LanExplorer():
 if __name__ == '__main__':
     # Clear the screen
     subprocess.call('clear', shell=True)
+    webview.create_window("It works, Jim!", "http://www.flowrl.com")
 
     tools = Tools()
     l = LanExplorer(tools.get_my_ip())
