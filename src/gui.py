@@ -19,7 +19,8 @@ class Browser(Gtk.Window):
         self.show()
 
     def _load_url(self):
-        url = "file://" + sys.path[0] + "/res/index.html"
+        # url = "file://" + sys.path[0] + "/res/index.html"
+        url = "http://localhost:8000"
         self.webview.load_uri(url)
 
 if __name__ == "__main__":
