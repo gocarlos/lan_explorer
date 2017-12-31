@@ -15,10 +15,9 @@ ENDIF()
 
 FIND_PACKAGE(Threads)
 find_package(PkgConfig)
+pkg_check_modules(PKG REQUIRED gtkmm-3.0)
 
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/cmake/settings.cmake")
-
-pkg_check_modules(PKG REQUIRED gtkmm-3.0)
 
 INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_LIST_DIR}/include
@@ -32,18 +31,6 @@ TARGET_LINK_LIBRARIES(${LAN_EXPLORER}
     ${GTKMM_LIBRARY_DIRS}
     ${PKG_LIBRARIES}
 )
-
-# TARGET_LINK_LIBRARIES(save_to_sqlite_db
-  # Threads::Threads
-  # sqlite3
-  # dl
-# )
-
-
-                                                                # it contains documentation
-# Now the variables GTKMM_INCLUDE_DIRS, GTKMM_LIBRARY_DIRS and GTKMM_LIBRARIES
-# contain what you expect
-
 
 ################################
 # Define Unit Tests
@@ -62,6 +49,3 @@ INSTALL(
   RUNTIME DESTINATION bin
   LIBRARY DESTINATION lib
 )
-
-# INSTALL(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/settings DESTINATION ${LAN_EXPLORER})
-# INSTALL(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/webserver DESTINATION ${LAN_EXPLORER})

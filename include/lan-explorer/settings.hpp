@@ -7,7 +7,7 @@
 
 namespace lan_explorer_settings {
 
-const std::string root_directory = "/snap/lan-explorer/current/lan-explorer/";
+const std::string root_directory = "/home/gocarlos/git/lan_explorer/cmake/../";
 
 } // namespace lan_explorer_settings
 
