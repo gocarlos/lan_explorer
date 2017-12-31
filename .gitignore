@@ -16,3 +16,7 @@ stage
 parts
 prime
 *.snap
+
+
+# gtk stuff
+*.glade~

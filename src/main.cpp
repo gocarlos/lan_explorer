@@ -6,10 +6,7 @@
 
 #include "lan-explorer/settings.hpp"
 
-
-//Gtk::Dialog* pDialog = nullptr;
-
-Gtk::Window* pDialog = nullptr;
+Gtk::ApplicationWindow* pDialog = nullptr;
 
 static
 void on_button_clicked()
@@ -29,7 +26,7 @@ int main(int argc, char *argv[]) {
   // Load the GtkBuilder file and instantiate its widgets:
   auto refBuilder = Gtk::Builder::create();
   try {
-    std::string layout =  home_path + "rsc/main_view.glade";
+    std::string layout =  home_path + "rsc/main_view2.glade";
     std::cout << layout << std::endl;
 
     refBuilder->add_from_file(layout);
@@ -43,7 +40,6 @@ int main(int argc, char *argv[]) {
     std::cerr << "BuilderError: " << ex.what() << std::endl;
     return 1;
   }
-
 
   //Get the GtkBuilder-instantiated Dialog:
   refBuilder->get_widget("DialogBasic", pDialog);
@@ -61,11 +57,6 @@ int main(int argc, char *argv[]) {
   }
 
   delete pDialog;
-
-  // Gtk::Window window;
-  // window.set_default_size(200, 200);
-
-  // return app->run(window);
 
   return 0;
 }
