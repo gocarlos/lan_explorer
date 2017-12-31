@@ -1,3 +1,4 @@
 !GlobalState
 assets:
   build-packages: []
+  build-snaps: []
