@@ -4,7 +4,7 @@
 
 #include <gtkmm.h>
 
-#include "lan_explorer/settings.hpp"
+#include "lan-explorer/settings.hpp"
 
 int main(int argc, char *argv[]) {
   std::cout << "Hello world\n";

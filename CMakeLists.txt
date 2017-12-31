@@ -18,24 +18,18 @@ find_package(PkgConfig)
 
 INCLUDE("${CMAKE_CURRENT_LIST_DIR}/cmake/settings.cmake")
 
-# pkg_check_modules(GTKMM gtkmm-2.4)
 pkg_check_modules(PKG REQUIRED gtkmm-3.0)
 
 INCLUDE_DIRECTORIES(
   ${CMAKE_CURRENT_LIST_DIR}/include
   ${GTKMM_INCLUDE_DIRS}
-)
-include_directories(${PKG_INCLUDE_DIRS})
-
-
-LINK_DIRECTORIES(
-  ${GTKMM_LIBRARY_DIRS}
-
+  ${PKG_INCLUDE_DIRS}
 )
 
 ADD_EXECUTABLE(${LAN_EXPLORER} src/main.cpp)
 TARGET_LINK_LIBRARIES(${LAN_EXPLORER}
     ${GTKMM_LIBRARIES}
+    ${GTKMM_LIBRARY_DIRS}
     ${PKG_LIBRARIES}
 )
 
