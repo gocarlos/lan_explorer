@@ -19,7 +19,6 @@ apps:
       - x11
       - wayland
       - gsettings
-      - themes
       - network-bind
       - network-control
       - account-control
@@ -51,7 +50,7 @@ parts:
       - locales-all
       - shared-mime-info
       - libxkbcommon0
-
+      - zlib1g
 
 
   #   build-packages:
