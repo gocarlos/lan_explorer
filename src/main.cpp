@@ -7,7 +7,9 @@
 #include "lan-explorer/settings.hpp"
 
 
-Gtk::Dialog* pDialog = nullptr;
+//Gtk::Dialog* pDialog = nullptr;
+
+Gtk::Window* pDialog = nullptr;
 
 static
 void on_button_clicked()
